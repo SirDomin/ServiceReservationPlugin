@@ -1,0 +1,4 @@
+sirdomin:
+    service_plugin:
+        ui:
+            service: 'Service'

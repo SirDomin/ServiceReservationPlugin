@@ -2,3 +2,31 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en_US
+
+sylius_grid:
+    grids:
+        sylius_admin_product:
+            actions:
+                main:
+                    create:
+                        type: links
+                        label: sylius.ui.create
+                        options:
+                            class: primary
+                            icon: plus
+                            header:
+                                icon: cube
+                                label: sylius.ui.type
+                            links:
+                                simple:
+                                    label: sylius.ui.simple_product
+                                    icon: plus
+                                    route: sylius_admin_product_create_simple
+                                configurable:
+                                    label: sylius.ui.configurable_product
+                                    icon: plus
+                                    route: sylius_admin_product_create
+                                service:
+                                    label: sirdomin.service_plugin.ui.service
+                                    icon: plus
+                                    route: sylius_admin_product_create_service
